@@ -17,5 +17,3 @@ deploy:
     api_key: $GIT_OAUTH_TOKEN
     file_glob: true
     file: "${RELEASE_PKG_FILE}"
-    on:
-        tags: true
