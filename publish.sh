@@ -23,3 +23,6 @@ zip -r NameSorter.zip NameSorter_Windos$revision.zip NameSorter_Linux_$revision.
 cp -r NameSorter.zip ../../../../
 
 cd ../../../../
+
+export RELEASE_PKG_FILE=$(ls *.zip)
+echo "Deploying $RELEASE_PKG_FILE to GitHub as a Tag"
