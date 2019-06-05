@@ -30,4 +30,6 @@ zip -r NameSorter_Windos$revision.zip win10-x64/*
 zip -r NameSorter_Linux_$revision.zip ubuntu.16.10-x64/*
 zip -r NameSorter.zip NameSorter_Windos$revision.zip NameSorter_Linux_$revision.zip
 
+cp -r NameSorter.zip ../../../../
+
 cd ../../../../
