@@ -5,6 +5,7 @@ mono: none
 script:
     - ./build.sh
 before_deploy:
+    - ./publish.sh
     # Set up git user name and tag this commit
     - git config --local user.name "James Britton"
     - git config --local user.email "jhb15@aber.ac.uk"
