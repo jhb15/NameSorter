@@ -104,7 +104,7 @@ namespace NameSorter
             var fileName = filePathParts[filePathParts.Length - 1];
             Console.WriteLine("input file name: " + fileName);
             using (var file =
-                _fileWrapper.GetStreamWriter(@"sorted_" + fileName))
+                _fileWrapper.GetStreamWriter(@"sorted" + fileName))
             {
                 Console.WriteLine("Sorted Names for File \"" + inputPath + "\":");
                 foreach (var name in sortedNames)
