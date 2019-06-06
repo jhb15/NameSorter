@@ -17,8 +17,5 @@ deploy:
     prerelease: true
     provider: releases
     api_key: $GIT_OAUTH_TOKEN
-    #file_glob: true
-    file:
-        - "$LINUX_RELEASE_FILE"
-        - "$WIN_RELEASE_FILE"
-        - "$ALL_RELEASE_FILE"
+    file_glob: true
+    file: "NameSorter/bin/Release/netcoreapp2.1/*.zip"
