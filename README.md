@@ -6,7 +6,9 @@ The Linux version of the application is built for Ubuntu 16.10 but has ran on ot
 
 #### To Download Application:
 >
->> Step 1: Go to the this tagged release, https://github.com/jhb15/NameSorter/releases/tag/1.0
+>> Step 1: Navigate to the release page of this GitHub page and find the lates one,
+ or follow this link. [Latest Release](https://github.com/jhb15/NameSorter/releases/latest)
+
 >
 >> Step 2: You should have a list of zip files in front of you, download the most relevant .zip for you 'NameSorter_Linux_.zip' for linux systems and 'NameSorter_Windows_.zip' for windows systems. There is also a zip containing both options 'NameSorter_All.zip'.
 >
