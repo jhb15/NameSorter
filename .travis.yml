@@ -11,7 +11,7 @@ before_deploy:
     - git config --local user.email "jhb15@aber.ac.uk"
     - export TRAVIS_TAG_VER=${TRAVIS_JOB_ID}-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)
     - export TRAVIS_TAG_MSG=NameSorter_DRAFT$(date '+[%d/%m/%Y][%H:%M:%S]')
-    - git tag -a TRAVIS_TAG_VER -m TRAVIS_TAG_MSG
+    - git tag -a $TRAVIS_TAG_VER -m $TRAVIS_TAG_MSG
 deploy:
     skip_cleanup: true
     prerelease: true
