@@ -17,5 +17,8 @@ deploy:
     prerelease: true
     provider: releases
     api_key: $GIT_OAUTH_TOKEN
-    file_glob: true
-    file: ${RELEASE_PKG_FILE}
+    #file_glob: true
+    file:
+        - "$LINUX_RELEASE_FILE"
+        - "$WIN_RELEASE_FILE"
+        - "$ALL_RELEASE_FILE"

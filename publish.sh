@@ -23,5 +23,8 @@ zip -r NameSorter_All.zip NameSorter_Windows_$revision.zip NameSorter_Linux_$rev
 #cp -r NameSorter.zip ../../../../
 cd ../../../../
 
-export RELEASE_PKG_FILE=$(ls NameSorter/bin/Release/netcoreapp2.1/*.zip)
-echo "Deploying $RELEASE_PKG_FILE to GitHub as a Tag"
+export ALL_RELEASE_FILE=$(ls NameSorter/bin/Release/netcoreapp2.1/*All.zip)
+export LINUX_RELEASE_FILE=$(ls NameSorter/bin/Release/netcoreapp2.1/*Linux*.zip)
+export WIN_RELEASE_FILE=$(ls NameSorter/bin/Release/netcoreapp2.1/*Windows*.zip)
+
+echo "Linux file: $LINUX_RELEASE_FILE \n Win File: $WIN_RELEASE_FILE \n All File: $ALL_RELEASE_FILE"
