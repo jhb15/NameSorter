@@ -16,4 +16,4 @@ deploy:
     provider: releases
     api_key: $GIT_OAUTH_TOKEN
     file_glob: true
-    file: "${RELEASE_PKG_FILE}"
+    file: ${RELEASE_PKG_FILE}
