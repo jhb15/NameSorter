@@ -9,9 +9,9 @@ before_deploy:
     # Set up git user name and tag this commit
     - git config --local user.name "James Britton"
     - git config --local user.email "jhb15@aber.ac.uk"
-    #- export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-    - export TRAVIS_TAG=NameSorter_DRAFT_${TRAVIS_JOB_ID}_$(date '+[%d-%m-%Y][%H:%M:%S]')
-    - git tag $TRAVIS_TAG
+    - export TRAVIS_TAG_VER=${TRAVIS_JOB_ID}-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)
+    - export TRAVIS_TAG_MSG=NameSorter_DRAFT$(date '+[%d/%m/%Y][%H:%M:%S]')
+    - git tag -a TRAVIS_TAG_VER -m TRAVIS_TAG_MSG
 deploy:
     provider: releases
     api_key: $GIT_OAUTH_TOKEN
