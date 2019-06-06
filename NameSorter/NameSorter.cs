@@ -14,6 +14,10 @@ namespace NameSorter
             _fileWrapper = fileWrapper;
         }
         
+        /**
+         * This function takes the inputted filepath and extracts the names from this file returning it as a Name object
+         * array.
+         */
         private Name[] ExtractNames(string filePath, NameFormats format)
         {
             try
@@ -36,11 +40,18 @@ namespace NameSorter
             }
         }
 
+        /**
+         * This function is used to trigger the recursive sort algorithm.
+         */
         private void SortNames(Name[] unsortedNames)
         {
             SortRecursive(unsortedNames, 0, unsortedNames.Length-1);
         }
 
+        /**
+         * This is part of a solution for sorting the names, it was modified from an example found online. Here is a URL
+         * to the original code: https://www.csharpstar.com/csharp-program-quick-sort/
+         */
         private int Partition(Name[] names, int left, int right)
         {
             var pivot = names[left];
@@ -65,6 +76,10 @@ namespace NameSorter
             }
         }
 
+        /**
+         * This is the recursive function that forms part of the solution and is also adapted from the code found here:
+         * https://www.csharpstar.com/csharp-program-quick-sort/
+         */
         private void SortRecursive(Name[] names, int left, int right)
         {
             if (left < right)
@@ -79,13 +94,17 @@ namespace NameSorter
             }
         }
 
+        /**
+         * This function is used to output the sorted names to the command line and also a text file in the current
+         * directory.
+         */
         private void OutputToFile(string inputPath, Name[] sortedNames)
         {
             var filePathParts = inputPath.Split('/');
             var fileName = filePathParts[filePathParts.Length - 1];
             Console.WriteLine("input file name: " + fileName);
             using (var file =
-                _fileWrapper.GetStreamWriter(@"sorted" + fileName))
+                _fileWrapper.GetStreamWriter(@"sorted_" + fileName))
             {
                 Console.WriteLine("Sorted Names for File \"" + inputPath + "\":");
                 foreach (var name in sortedNames)
@@ -97,6 +116,10 @@ namespace NameSorter
             }
         }
 
+        /**
+         * This method is used to sort a list of names contained in a .txt file. It takes a file path and the format that
+         * corresponds to the format of the names within the file.
+         */
         public void Sort(string path, NameFormats format)
         {
             var names = ExtractNames(path, format);
