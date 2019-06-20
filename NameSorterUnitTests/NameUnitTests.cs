@@ -11,7 +11,7 @@ namespace NameSorterUnitTests
         public void TestInOrderFormatConstruction()
         {
             const string inputStr = "James Henry Britton";
-            var expectedObject = new Name(new string[] {"James", "Henry"}, "Britton");
+            var expectedObject = new Name("James Henry", "Britton");
 
             var testResultObj = new Name(inputStr, NameFormats.InOrder);
             
@@ -22,7 +22,7 @@ namespace NameSorterUnitTests
         public void TestBackwardFormatConstruction()
         {
             const string inputStr = "Britton Henry James";
-            var expectedObject = new Name(new string[] {"James", "Henry"}, "Britton");
+            var expectedObject = new Name("James Henry", "Britton");
             
             var testResultObj = new Name(inputStr, NameFormats.Backwards);
             
@@ -33,7 +33,7 @@ namespace NameSorterUnitTests
         public void TestSurnameFirstFormatConstruction()
         {
             const string inputStr = "Britton James Henry";
-            var expectedObject = new Name(new string[] {"James", "Henry"}, "Britton");
+            var expectedObject = new Name("James Henry", "Britton");
             
             var testResultObj = new Name(inputStr, NameFormats.SurnameFirst);
             
@@ -43,10 +43,10 @@ namespace NameSorterUnitTests
         [Fact]
         public void TestNameCompareTo()
         {
-            var name1 = new Name(new string[] {"Alfred", "Henry"}, "Britton");
-            var name2 = new Name(new string[] {"Alfred", "James"}, "Britton");
-            var name3 = new Name(new string[] {"Alice", "Laura"}, "Britton");
-            var name4 = new Name(new string[] {"James", "Henry"}, "Britton");
+            var name1 = new Name("Alfred Henry", "Britton");
+            var name2 = new Name("Alfred James", "Britton");
+            var name3 = new Name("Alice Laura", "Britton");
+            var name4 = new Name("James Henry", "Britton");
 
             var equalName4 = name4;
 
@@ -64,7 +64,7 @@ namespace NameSorterUnitTests
         [Fact]
         public void TestNameToString()
         {
-            var inputName = new Name(new string[] {"Test"}, "Name");
+            var inputName = new Name("Test", "Name");
             var expectedOutput = "Test Name";
 
             var testRes = inputName.ToString();

@@ -12,8 +12,8 @@ namespace NameSorter
      */
     public class Name
     {
-        private string[] _forenames;
-        private string _surname;
+        public string Forenames;
+        public string Surname;
 
         /**
          * Constructor that takes a raw name string and construct the name using this, this also take in an parameter for
@@ -26,15 +26,15 @@ namespace NameSorter
             BuildNameFromRawString(rawNameText, (NameFormats)format);
         }
 
-        public Name(string[] forenames, string surname)
+        public Name(string forenames, string surname)
         {
             Init(forenames, surname);
         }
 
-        private void Init(string[] forenames, string surname)
+        private void Init(string forenames, string surname)
         {
-            _forenames = forenames;
-            _surname = surname;
+            Forenames = forenames;
+            Surname = surname;
         }
 
         private void BuildNameFromRawString(string rawString, NameFormats format)
@@ -93,7 +93,8 @@ namespace NameSorter
                 forenames[i] = cleanComponents[i];
             }
 
-            Init(forenames, surname);
+            var foreStr = string.Join(" ", forenames);
+            Init(foreStr, surname);
         }
 
         private void BuildNameFromBackwardsString(string rawString)
@@ -110,7 +111,8 @@ namespace NameSorter
                 j++;
             }
 
-            Init(forenames, surname);
+            var foreStr = string.Join(" ", forenames);
+            Init(foreStr, surname);
         }
 
         private void BuildNameFromSurnameFirstString(string rawString)
@@ -127,26 +129,25 @@ namespace NameSorter
                 j++;
             }
 
-            Init(forenames, surname);
+            var foreStr = string.Join(" ", forenames);
+            Init(foreStr, surname);
         }
 
         public int CompareTo(Name name)
         {
-            var ret = string.Compare(_surname, name._surname, StringComparison.Ordinal);
+            var ret = string.Compare(Surname, name.Surname, StringComparison.Ordinal);
 
             if (ret != 0) return ret;
 
-            var forenames = string.Join(" ", _forenames);
-            var nameForenames = string.Join(" ", name._forenames);
-            ret = string.Compare(forenames, nameForenames, StringComparison.Ordinal);
+            ret = string.Compare(Forenames, name.Forenames, StringComparison.Ordinal);
 
             return ret;
         }
 
         public override string ToString()
         {
-            var forenames = string.Join(" ", _forenames);
-            return forenames + " " + _surname;
+            var forenames = string.Join(" ", Forenames);
+            return forenames + " " + Surname;
             //return "fns:" + forenames + " sn:" + _surname;
         }
     }
