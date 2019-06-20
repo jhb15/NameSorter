@@ -20,17 +20,20 @@ namespace NameSorter
     {
         private static NameFormats _format;
         private static string[] _filePaths = null;
+        private static bool _ascending = true;
         
         private static void ExtractArgs(string[] args)
         {
             var numberOfInputs = args.Length;
-            var index = Array.FindIndex(
-                args,
-                s => s.Equals("-f")
-            );
-            if (index != -1)
+            var indexOfFormat = Array.FindIndex(args, s => s.Equals("-f"));
+            var indexOfAscending = Array.FindIndex(args, s => s.Equals("-a"));
+            var indexOfDescending = Array.FindIndex(args, s => s.Equals("-d"));
+
+            if (indexOfDescending != -1) _ascending = false; 
+            
+            if (indexOfFormat != -1)
             {
-                var formatStr = args[index + 1];
+                var formatStr = args[indexOfFormat + 1];
                 var parseRet = Enum.TryParse(formatStr, true, out NameFormats outFormat);
                 numberOfInputs = args.Length - 2;
                 
@@ -50,7 +53,8 @@ namespace NameSorter
             var j = 0;
             for (var i = 0; i < args.Length; i++)
             {
-                if ((index == -1) || ((i != index) && (i != index + 1)))
+                if (((i != indexOfFormat) && (i != indexOfFormat + 1)) ||
+                    ((i != indexOfAscending) && (i != indexOfDescending)))
                 {
                     _filePaths[j] = args[i];
                     Console.WriteLine(args[i]);
@@ -70,7 +74,7 @@ namespace NameSorter
 
                 foreach (var path in _filePaths)
                 {
-                    nameSorter.Sort(path, _format);
+                    if (path != null) nameSorter.Sort(path, _format, _ascending);
                 }
             }
             catch (ArgumentException e)
