@@ -35,7 +35,9 @@
         </e>
         <e p="sortedExampleTest.txt" t="Include" />
         <e p="sortedSystem.String[]" t="Include" />
+        <e p="sortednameFile1.txt" t="Include" />
         <e p="sortednameFile2.txt" t="Include" />
+        <e p="sortednameFile3.txt" t="Include" />
       </e>
       <e p="NameSorter.sln" t="IncludeFlat" />
       <e p="NameSorterUnitTests" t="IncludeRecursive">

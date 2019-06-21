@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using NameSorter.Interfaces;
 
@@ -19,17 +20,70 @@ namespace NameSorter
     class Program
     {
         private static NameFormats _format;
-        private static string[] _filePaths = null;
+        private static List<string> _filePaths = null;
         private static bool _ascending = true;
-        
+
         private static void ExtractArgs(string[] args)
+        {
+            var formatIndex = -1;
+            _filePaths = new List<string>();
+            foreach ((string value, int i) in args.Select((value, i) => (value, i)))
+            {
+                if (value.StartsWith("-"))
+                {
+                    switch (value.Substring(1))
+                    {
+                        case "a":
+                            _ascending = true;
+                            break;
+                        case "d":
+                            _ascending = false;
+                            break;
+                        case "f":
+                            formatIndex = i + 1;
+                            break;
+                        default:
+                            Console.WriteLine("Error Unrecognised Flag, the Flag \"" + value + "\" is going to be ignored!");
+                            break;
+                    }
+                }
+                else
+                {
+                    if (i == formatIndex)
+                    {
+                        _format = StringToNameFormat(value);
+                    }
+                    else
+                    {
+                        _filePaths.Add(value);
+                    }
+                }
+            }
+        }
+
+        private static NameFormats StringToNameFormat(string formatStr)
+        {
+            var parseRet = Enum.TryParse(formatStr, true, out NameFormats outFormat);
+                
+            if (!parseRet)
+            {
+                var possibleFormats = string.Join(",", Enum.GetNames(typeof(NameFormats)));
+                throw new ArgumentException("Inputted Format Not Recognised! got: \"" + formatStr + "\" possible values: \"" + possibleFormats + "\"");
+            }
+
+            return outFormat;
+        }
+        
+        /*private static void ExtractArgs(string[] args)
         {
             var numberOfInputs = args.Length;
             var indexOfFormat = Array.FindIndex(args, s => s.Equals("-f"));
             var indexOfAscending = Array.FindIndex(args, s => s.Equals("-a"));
             var indexOfDescending = Array.FindIndex(args, s => s.Equals("-d"));
 
-            if (indexOfDescending != -1) _ascending = false; 
+            // Making assumption that if descending flag isn't found we will always use ascending. But we are still
+            // looking for the -a flag as well just in case it is specified and we need to ignore it.
+            if (indexOfDescending != -1) _ascending = false;
             
             if (indexOfFormat != -1)
             {
@@ -62,7 +116,7 @@ namespace NameSorter
                 }
             }
             Console.WriteLine("\n");
-        }
+        }*/
 
         static void Main(string[] args)
         {

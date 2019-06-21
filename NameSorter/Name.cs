@@ -51,7 +51,7 @@ namespace NameSorter
                     BuildNameFromSurnameFirstString(rawString);
                     break;
                 default:
-                    Console.WriteLine("Error name format not recognised! Format used: " + format);
+                    Console.WriteLine("Error name format not recognised or implemented! Format used: " + format);
                     break;
             }
         }
@@ -82,7 +82,7 @@ namespace NameSorter
 
         private void BuildNameFromInOrderString(string rawString)
         {
-            //var nameComponents = rawString.Split(null);    
+            //var nameComponents = rawString.Split(null);
             var nameComponents = Regex.Split(rawString, @"\s+");
             var cleanComponents = SanitiseInputName(nameComponents);
             var forenames = new string[cleanComponents.Length - 1];
