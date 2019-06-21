@@ -73,8 +73,10 @@ namespace NameSorter
         {
             var names = ExtractNames(path, format);
             
-            if (isAscending) names = names.OrderBy(s => s.Forenames).ThenBy(s => s.Surname).ToArray();
-            else names = names.OrderByDescending(s => s.Surname).ThenByDescending(s => s.Forenames).ToArray();
+            if (names == null) return;
+            
+            names = isAscending ? names.OrderBy(s => s.Forenames).ThenBy(s => s.Surname).ToArray() : 
+                names.OrderByDescending(s => s.Surname).ThenByDescending(s => s.Forenames).ToArray();
             
             OutputToFile(path, names);
         }

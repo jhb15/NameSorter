@@ -23,6 +23,10 @@ namespace NameSorter
         private static List<string> _filePaths = null;
         private static bool _ascending = true;
 
+        /**
+         * Function for extracting the arguments from the args input in the main function, it takes the input string
+         * array directly and extracts the flags from it and also the fullpaths.
+         */
         private static void ExtractArgs(string[] args)
         {
             var formatIndex = -1;
@@ -61,6 +65,9 @@ namespace NameSorter
             }
         }
 
+        /**
+         * Function for converting string into a format enum.
+         */
         private static NameFormats StringToNameFormat(string formatStr)
         {
             var parseRet = Enum.TryParse(formatStr, true, out NameFormats outFormat);
@@ -73,50 +80,6 @@ namespace NameSorter
 
             return outFormat;
         }
-        
-        /*private static void ExtractArgs(string[] args)
-        {
-            var numberOfInputs = args.Length;
-            var indexOfFormat = Array.FindIndex(args, s => s.Equals("-f"));
-            var indexOfAscending = Array.FindIndex(args, s => s.Equals("-a"));
-            var indexOfDescending = Array.FindIndex(args, s => s.Equals("-d"));
-
-            // Making assumption that if descending flag isn't found we will always use ascending. But we are still
-            // looking for the -a flag as well just in case it is specified and we need to ignore it.
-            if (indexOfDescending != -1) _ascending = false;
-            
-            if (indexOfFormat != -1)
-            {
-                var formatStr = args[indexOfFormat + 1];
-                var parseRet = Enum.TryParse(formatStr, true, out NameFormats outFormat);
-                numberOfInputs = args.Length - 2;
-                
-                if (!parseRet)
-                {
-                    var possibleFormats = string.Join(",", Enum.GetNames(typeof(NameFormats)));
-                    throw new ArgumentException("Inputted Format Not Recognised! got: \"" + formatStr + "\" possible values: \"" + possibleFormats + "\"");
-                }
-
-                _format = outFormat;
-            }
-
-            _filePaths = new string[numberOfInputs];
-            Console.WriteLine("Format: " + _format);
-
-            Console.WriteLine("Input Files:");
-            var j = 0;
-            for (var i = 0; i < args.Length; i++)
-            {
-                if (((i != indexOfFormat) && (i != indexOfFormat + 1)) ||
-                    ((i != indexOfAscending) && (i != indexOfDescending)))
-                {
-                    _filePaths[j] = args[i];
-                    Console.WriteLine(args[i]);
-                    j++;
-                }
-            }
-            Console.WriteLine("\n");
-        }*/
 
         static void Main(string[] args)
         {
@@ -128,6 +91,7 @@ namespace NameSorter
 
                 foreach (var path in _filePaths)
                 {
+                    Console.WriteLine("#############################################################################");
                     if (path != null) nameSorter.Sort(path, _format, _ascending);
                 }
             }
