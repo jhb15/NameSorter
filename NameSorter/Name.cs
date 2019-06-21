@@ -26,6 +26,10 @@ namespace NameSorter
             BuildNameFromRawString(rawNameText, (NameFormats)format);
         }
 
+        /**
+         * Simple constructor that takes in the values for both forenames and surnames directly instead of having to
+         * extract these values from an input string.
+         */
         public Name(string forenames, string surname)
         {
             Init(forenames, surname);
@@ -39,16 +43,19 @@ namespace NameSorter
 
         private void BuildNameFromRawString(string rawString, NameFormats format)
         {
+            var nameComponents = Regex.Split(rawString, @"\s+");
+            var cleanComponents = SanitiseInputName(nameComponents);
+            
             switch (format)
             {
                 case NameFormats.InOrder:
-                    BuildNameFromInOrderString(rawString);
+                    BuildNameFromInOrderString(cleanComponents);
                     break;
                 case NameFormats.Backwards:
-                    BuildNameFromBackwardsString(rawString);
+                    BuildNameFromBackwardsString(cleanComponents);
                     break;
                 case NameFormats.SurnameFirst:
-                    BuildNameFromSurnameFirstString(rawString);
+                    BuildNameFromSurnameFirstString(cleanComponents);
                     break;
                 default:
                     Console.WriteLine("Error name format not recognised or implemented! Format used: " + format);
@@ -56,58 +63,43 @@ namespace NameSorter
             }
         }
 
+        /**
+         * This function is used to remove any empty fields from the name component string array so that the name is
+         * interpreted properly.
+         */
         private string[] SanitiseInputName(string[] nameComponents)
         {
             List<string> componentList = new List<string>(nameComponents);
-            var i = 0;
-            List<int> componentsToRemove = new List<int>();
-            foreach (var component in componentList)
-            {
-                var space = string.Compare(component, " ", StringComparison.Ordinal);
-                var newLine = string.Compare(component, "\n", StringComparison.Ordinal);
-                var nothing = string.Compare(component, "", StringComparison.Ordinal);
-                if ((nothing == 0) || (newLine == 0) || (space == 0))
-                {
-                    //componentList.Remove(component); //TODO For some reason this didn't work
-                    componentsToRemove.Add(i);
-                }
-                i++;
-            }
-            foreach (var index in componentsToRemove)
-            {
-                componentList.RemoveAt(index);
-            }
+            
+            componentList.RemoveAll(string.IsNullOrEmpty);
+            componentList.RemoveAll(string.IsNullOrWhiteSpace);
+            
             return componentList.ToArray();
         }
 
-        private void BuildNameFromInOrderString(string rawString)
+        private void BuildNameFromInOrderString(string[] nameComponents)
         {
-            //var nameComponents = rawString.Split(null);
-            var nameComponents = Regex.Split(rawString, @"\s+");
-            var cleanComponents = SanitiseInputName(nameComponents);
-            var forenames = new string[cleanComponents.Length - 1];
-            var surname = cleanComponents.Last();
+            var forenames = new string[nameComponents.Length - 1];
+            var surname = nameComponents.Last();
 
-            for (var i = 0; i < (cleanComponents.Length - 1); i++)
+            for (var i = 0; i < (nameComponents.Length - 1); i++)
             {
-                forenames[i] = cleanComponents[i];
+                forenames[i] = nameComponents[i];
             }
 
             var foreStr = string.Join(" ", forenames);
             Init(foreStr, surname);
         }
 
-        private void BuildNameFromBackwardsString(string rawString)
+        private void BuildNameFromBackwardsString(string[] nameComponents)
         {
-            var nameComponents = Regex.Split(rawString, @"\s+");
-            var cleanComponents = SanitiseInputName(nameComponents);
-            var forenames = new string[cleanComponents.Length - 1];
-            var surname = cleanComponents.First();
+            var forenames = new string[nameComponents.Length - 1];
+            var surname = nameComponents.First();
 
             var j = 0;
-            for (var i = (cleanComponents.Length - 1); i > 0; i--)
+            for (var i = (nameComponents.Length - 1); i > 0; i--)
             {
-                forenames[j] = cleanComponents[i];
+                forenames[j] = nameComponents[i];
                 j++;
             }
 
@@ -115,17 +107,15 @@ namespace NameSorter
             Init(foreStr, surname);
         }
 
-        private void BuildNameFromSurnameFirstString(string rawString)
+        private void BuildNameFromSurnameFirstString(string[] nameComponents)
         {
-            var nameComponents = Regex.Split(rawString, @"\s+");
-            var cleanComponents = SanitiseInputName(nameComponents);
-            var forenames = new string[cleanComponents.Length - 1];
-            var surname = cleanComponents.First();
+            var forenames = new string[nameComponents.Length - 1];
+            var surname = nameComponents.First();
 
             var j = 0;
-            for (var i = 1; i < cleanComponents.Length; i++)
+            for (var i = 1; i < nameComponents.Length; i++)
             {
-                forenames[j] = cleanComponents[i];
+                forenames[j] = nameComponents[i];
                 j++;
             }
 
@@ -146,9 +136,8 @@ namespace NameSorter
 
         public override string ToString()
         {
-            var forenames = string.Join(" ", Forenames);
-            return forenames + " " + Surname;
-            //return "fns:" + forenames + " sn:" + _surname;
+            return Forenames + " " + Surname;
+            //return "fns:" + Forenames + " sn:" + Surname;
         }
     }
 }

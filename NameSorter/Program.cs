@@ -16,7 +16,7 @@ namespace NameSorter
         SurnameFirst,
         Backwards
     }
-    
+
     class Program
     {
         private static NameFormats _format;

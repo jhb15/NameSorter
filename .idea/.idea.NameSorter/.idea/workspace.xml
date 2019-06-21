@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0dffb93e-a48e-4c27-8832-3c70a3fc1a1e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NameSorter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NameSorter/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NameSorter/Name.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NameSorter/Name.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NameSorter/NameSorter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NameSorter/NameSorter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NameSorter/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NameSorter/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NameSorterUnitTests/NameUnitTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NameSorterUnitTests/NameUnitTests.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,45 +16,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NameSorter/Name.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1264">
-              <caret line="84" column="57" lean-forward="true" selection-start-line="84" selection-start-column="57" selection-end-line="84" selection-end-column="57" />
+            <state relative-caret-position="240">
+              <caret line="112" column="49" lean-forward="true" selection-start-line="112" selection-start-column="49" selection-end-line="112" selection-end-column="49" />
               <folding>
-                <marker date="1561115347748" expanded="false" signature="6:152" ph="..." />
-                <marker date="1561115347748" expanded="true" signature="174:5220" ph="{...}" />
-                <marker date="1561115347748" expanded="true" signature="181:257" ph="/* Class used to represent a name in the NameSorter program. ... */" />
-                <marker date="1561115347748" expanded="true" signature="279:5218" ph="{...}" />
-                <marker date="1561115347748" expanded="true" signature="359:561" ph="/* Constructor that takes a raw name string and construct the name using this, this also take in an parameter for ... */" />
-                <marker date="1561115347748" expanded="true" signature="622:787" ph="{...}" />
-                <marker date="1561115347748" expanded="true" signature="842:900" ph="{...}" />
-                <marker date="1561115347748" expanded="true" signature="961:1047" ph="{...}" />
-                <marker date="1561115347748" expanded="true" signature="1130:1770" ph="{...}" />
-                <marker date="1561115347748" expanded="true" signature="1168:1760" ph="{...}" />
-                <marker date="1561115347748" expanded="true" signature="1839:2802" ph="{...}" />
-                <marker date="1561115347748" expanded="true" signature="2060:2619" ph="{...}" />
-                <marker date="1561115347748" expanded="true" signature="2406:2584" ph="{...}" />
-                <marker date="1561115347748" expanded="true" signature="2673:2748" ph="{...}" />
-                <marker date="1561115347748" expanded="true" signature="2869:3438" ph="{...}" />
-                <marker date="1561115347748" expanded="true" signature="3257:3336" ph="{...}" />
-                <marker date="1561115347748" expanded="true" signature="3507:4063" ph="{...}" />
-                <marker date="1561115347748" expanded="true" signature="3861:3961" ph="{...}" />
-                <marker date="1561115347748" expanded="true" signature="4135:4685" ph="{...}" />
-                <marker date="1561115347748" expanded="true" signature="4483:4583" ph="{...}" />
-                <marker date="1561115347748" expanded="true" signature="4726:4985" ph="{...}" />
-                <marker date="1561115347748" expanded="true" signature="5028:5212" ph="{...}" />
+                <marker date="1561134252006" expanded="false" signature="6:152" ph="..." />
+                <marker date="1561134252006" expanded="true" signature="174:4570" ph="{...}" />
+                <marker date="1561134252006" expanded="true" signature="181:257" ph="/* Class used to represent a name in the NameSorter program. ... */" />
+                <marker date="1561134252006" expanded="true" signature="279:4568" ph="{...}" />
+                <marker date="1561134252006" expanded="true" signature="359:561" ph="/* Constructor that takes a raw name string and construct the name using this, this also take in an parameter for ... */" />
+                <marker date="1561134252006" expanded="true" signature="622:787" ph="{...}" />
+                <marker date="1561134252006" expanded="true" signature="797:983" ph="/* Simple constructor that takes in the values for both forenames and surnames directly instead of having to ... */" />
+                <marker date="1561134252006" expanded="true" signature="1037:1095" ph="{...}" />
+                <marker date="1561134252006" expanded="true" signature="1156:1242" ph="{...}" />
+                <marker date="1561134252006" expanded="true" signature="1325:2130" ph="{...}" />
+                <marker date="1561134252006" expanded="true" signature="1510:2120" ph="{...}" />
+                <marker date="1561134252006" expanded="true" signature="2140:2305" ph="/* This function is used to remove any empty fields from the name component string array so that the name is ... */" />
+                <marker date="1561134252006" expanded="true" signature="2373:2661" ph="{...}" />
+                <marker date="1561134252006" expanded="true" signature="2735:3108" ph="{...}" />
+                <marker date="1561134252006" expanded="true" signature="2928:3006" ph="{...}" />
+                <marker date="1561134252006" expanded="true" signature="3184:3602" ph="{...}" />
+                <marker date="1561134252006" expanded="true" signature="3401:3500" ph="{...}" />
+                <marker date="1561134252006" expanded="true" signature="3681:4093" ph="{...}" />
+                <marker date="1561134252006" expanded="true" signature="3892:3991" ph="{...}" />
+                <marker date="1561134252006" expanded="true" signature="4134:4393" ph="{...}" />
+                <marker date="1561134252006" expanded="true" signature="4436:4562" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="357">
-                <caret line="53" selection-start-line="53" selection-end-line="53" />
+              <first_editor relative-caret-position="848">
+                <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -64,17 +65,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NameSorterUnitTests/NameUnitTests.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+            <state relative-caret-position="192">
+              <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
               <folding>
-                <marker date="1561056849883" expanded="false" signature="6:89" ph="..." />
-                <marker date="1561056849883" expanded="true" signature="120:2418" ph="{...}" />
-                <marker date="1561056849883" expanded="true" signature="153:2416" ph="{...}" />
-                <marker date="1561056849883" expanded="true" signature="226:542" ph="{...}" />
-                <marker date="1561056849883" expanded="true" signature="611:941" ph="{...}" />
-                <marker date="1561056849883" expanded="true" signature="1022:1355" ph="{...}" />
-                <marker date="1561056849883" expanded="true" signature="1419:2122" ph="{...}" />
-                <marker date="1561056849883" expanded="true" signature="2177:2410" ph="{...}" />
+                <marker date="1561125289133" expanded="false" signature="6:89" ph="..." />
+                <marker date="1561125289133" expanded="true" signature="120:2436" ph="{...}" />
+                <marker date="1561125289133" expanded="true" signature="153:2434" ph="{...}" />
+                <marker date="1561125289133" expanded="true" signature="226:542" ph="{...}" />
+                <marker date="1561125289133" expanded="true" signature="611:941" ph="{...}" />
+                <marker date="1561125289133" expanded="true" signature="1022:1355" ph="{...}" />
+                <marker date="1561125289133" expanded="true" signature="1419:2140" ph="{...}" />
+                <marker date="1561125289133" expanded="true" signature="2195:2428" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -83,24 +84,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NameSorter/NameSorter.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-157">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="96">
+              <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
               <folding>
-                <marker date="1561123725920" expanded="false" signature="6:96" ph="..." />
-                <marker date="1561123725920" expanded="true" signature="118:2963" ph="{...}" />
-                <marker date="1561123725920" expanded="true" signature="148:2961" ph="{...}" />
-                <marker date="1561123725920" expanded="true" signature="250:310" ph="{...}" />
-                <marker date="1561123725920" expanded="true" signature="328:482" ph="/* This function takes the inputted filepath and extracts the names from this file returning it as a Name object ... */" />
-                <marker date="1561123725920" expanded="true" signature="555:1280" ph="{...}" />
-                <marker date="1561123725920" expanded="true" signature="581:1087" ph="{...}" />
-                <marker date="1561123725920" expanded="true" signature="854:1002" ph="{...}" />
-                <marker date="1561123725920" expanded="true" signature="1131:1270" ph="{...}" />
-                <marker date="1561123725920" expanded="true" signature="1290:1443" ph="/* This function is used to output the sorted names to the command line and also a text file in the current ... */" />
-                <marker date="1561123725920" expanded="true" signature="1515:2272" ph="{...}" />
-                <marker date="1561123725920" expanded="true" signature="1869:2192" ph="{...}" />
-                <marker date="1561123725920" expanded="true" signature="2003:2137" ph="{...}" />
-                <marker date="1561123725920" expanded="true" signature="2282:2486" ph="/* This method is used to sort a list of names contained in a .txt file. It takes a file path and the format that ... */" />
-                <marker date="1561123725920" expanded="true" signature="2562:2955" ph="{...}" />
+                <marker date="1561125835503" expanded="false" signature="6:96" ph="..." />
+                <marker date="1561125835503" expanded="true" signature="118:2972" ph="{...}" />
+                <marker date="1561125835503" expanded="true" signature="148:2970" ph="{...}" />
+                <marker date="1561125835503" expanded="true" signature="259:319" ph="{...}" />
+                <marker date="1561125835503" expanded="true" signature="337:491" ph="/* This function takes the inputted filepath and extracts the names from this file returning it as a Name object ... */" />
+                <marker date="1561125835503" expanded="true" signature="564:1289" ph="{...}" />
+                <marker date="1561125835503" expanded="true" signature="590:1096" ph="{...}" />
+                <marker date="1561125835503" expanded="true" signature="863:1011" ph="{...}" />
+                <marker date="1561125835503" expanded="true" signature="1140:1279" ph="{...}" />
+                <marker date="1561125835503" expanded="true" signature="1299:1452" ph="/* This function is used to output the sorted names to the command line and also a text file in the current ... */" />
+                <marker date="1561125835503" expanded="true" signature="1524:2281" ph="{...}" />
+                <marker date="1561125835503" expanded="true" signature="1878:2201" ph="{...}" />
+                <marker date="1561125835503" expanded="true" signature="2012:2146" ph="{...}" />
+                <marker date="1561125835503" expanded="true" signature="2291:2495" ph="/* This method is used to sort a list of names contained in a .txt file. It takes a file path and the format that ... */" />
+                <marker date="1561125835503" expanded="true" signature="2571:2964" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -109,29 +110,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NameSorter/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="93" column="116" selection-start-line="93" selection-start-column="116" selection-end-line="93" selection-end-column="116" />
+            <state relative-caret-position="1200">
+              <caret line="83" column="39" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="39" />
               <folding>
-                <marker date="1561124472030" expanded="true" signature="6:95" ph="..." />
-                <marker date="1561124472030" expanded="true" signature="117:3474" ph="{...}" />
-                <marker date="1561124472030" expanded="true" signature="124:416" ph="/* Enum used to represent possible formats for the input name string, example is given as string with the names ... */" />
-                <marker date="1561124472030" expanded="true" signature="444:513" ph="{...}" />
-                <marker date="1561124472030" expanded="true" signature="536:3472" ph="{...}" />
-                <marker date="1561124472030" expanded="true" signature="698:911" ph="/* Function for extracting the arguments from the args input in the main function, it takes the input string ... */" />
-                <marker date="1561124472030" expanded="true" signature="966:2214" ph="{...}" />
-                <marker date="1561124472030" expanded="true" signature="1140:2204" ph="{...}" />
-                <marker date="1561124472030" expanded="true" signature="1197:1870" ph="{...}" />
-                <marker date="1561124472030" expanded="true" signature="1263:1852" ph="{...}" />
-                <marker date="1561124472030" expanded="true" signature="1891:2190" ph="{...}" />
-                <marker date="1561124472030" expanded="true" signature="1951:2056" ph="{...}" />
-                <marker date="1561124472030" expanded="true" signature="2081:2172" ph="{...}" />
-                <marker date="1561124472030" expanded="true" signature="2224:2301" ph="/* Function for converting string into a format enum. ... */" />
-                <marker date="1561124472030" expanded="true" signature="2373:2826" ph="{...}" />
-                <marker date="1561124472030" expanded="true" signature="2513:2785" ph="{...}" />
-                <marker date="1561124472030" expanded="true" signature="2867:3466" ph="{...}" />
-                <marker date="1561124472030" expanded="true" signature="2970:3321" ph="{...}" />
-                <marker date="1561124472030" expanded="true" signature="3069:3307" ph="{...}" />
-                <marker date="1561124472030" expanded="true" signature="3361:3456" ph="{...}" />
+                <marker date="1561125710443" expanded="true" signature="6:95" ph="..." />
+                <marker date="1561125710443" expanded="true" signature="117:3470" ph="{...}" />
+                <marker date="1561125710443" expanded="true" signature="124:416" ph="/* Enum used to represent possible formats for the input name string, example is given as string with the names ... */" />
+                <marker date="1561125710443" expanded="true" signature="444:513" ph="{...}" />
+                <marker date="1561125710443" expanded="true" signature="532:3468" ph="{...}" />
+                <marker date="1561125710443" expanded="true" signature="694:907" ph="/* Function for extracting the arguments from the args input in the main function, it takes the input string ... */" />
+                <marker date="1561125710443" expanded="true" signature="962:2210" ph="{...}" />
+                <marker date="1561125710443" expanded="true" signature="1136:2200" ph="{...}" />
+                <marker date="1561125710443" expanded="true" signature="1193:1866" ph="{...}" />
+                <marker date="1561125710443" expanded="true" signature="1259:1848" ph="{...}" />
+                <marker date="1561125710443" expanded="true" signature="1887:2186" ph="{...}" />
+                <marker date="1561125710443" expanded="true" signature="1947:2052" ph="{...}" />
+                <marker date="1561125710443" expanded="true" signature="2077:2168" ph="{...}" />
+                <marker date="1561125710443" expanded="true" signature="2220:2297" ph="/* Function for converting string into a format enum. ... */" />
+                <marker date="1561125710443" expanded="true" signature="2369:2822" ph="{...}" />
+                <marker date="1561125710443" expanded="true" signature="2509:2781" ph="{...}" />
+                <marker date="1561125710443" expanded="true" signature="2863:3462" ph="{...}" />
+                <marker date="1561125710443" expanded="true" signature="2966:3317" ph="{...}" />
+                <marker date="1561125710443" expanded="true" signature="3065:3303" ph="{...}" />
+                <marker date="1561125710443" expanded="true" signature="3357:3452" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -168,14 +169,14 @@
         <option value="$PROJECT_DIR$/NameSorter/Interfaces/IFileWrapper.cs" />
         <option value="$PROJECT_DIR$/NameSorter/Interfaces/FileWrapper.cs" />
         <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/NameSorterUnitTests/NameUnitTests.cs" />
         <option value="$PROJECT_DIR$/NameSorterUnitTests/NameSorterUnitTests.cs" />
-        <option value="$PROJECT_DIR$/NameSorter/Name.cs" />
         <option value="$PROJECT_DIR$/NameSorterUnitTests/ProgramUnitTests.cs" />
         <option value="$PROJECT_DIR$/NameSorter/ArgumentExtractor.cs" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/NameSorterUnitTests/NameUnitTests.cs" />
         <option value="$PROJECT_DIR$/NameSorter/NameSorter.cs" />
         <option value="$PROJECT_DIR$/NameSorter/Program.cs" />
-        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/NameSorter/Name.cs" />
       </list>
     </option>
   </component>
@@ -191,30 +192,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
       <pane id="SolutionExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NameSorter" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NameSorter" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="NameSorter" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NameSorter" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="NameSorterUnitTests" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -283,12 +265,15 @@
       <workItem from="1559783118498" duration="1048000" />
       <workItem from="1559785895497" duration="3916000" />
       <workItem from="1559790206036" duration="1685000" />
-      <workItem from="1561051646588" duration="13776000" />
+      <workItem from="1561051646588" duration="14594000" />
+      <workItem from="1561126084664" duration="3189000" />
+      <workItem from="1561132431116" duration="1836000" />
+      <workItem from="1561136302990" duration="1625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64098000" />
+    <option name="totallyTimeSpent" value="71566000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -303,12 +288,12 @@
     <frame x="-4" y="0" width="1928" height="1039" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27588046" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2854856" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31201765" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31201765" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39911798" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -318,10 +303,10 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Unit Tests" order="12" weight="0.32855567" />
+      <window_info active="true" anchor="bottom" id="Unit Tests" order="12" visible="true" weight="0.32855567" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.3296582" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="15" weight="0.7750827" />
+      <window_info anchor="bottom" id="Build" order="15" weight="0.4641676" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -450,117 +435,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NameSorterUnitTests/NameUnitTests.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-          <folding>
-            <marker date="1561056849883" expanded="false" signature="6:89" ph="..." />
-            <marker date="1561056849883" expanded="true" signature="120:2418" ph="{...}" />
-            <marker date="1561056849883" expanded="true" signature="153:2416" ph="{...}" />
-            <marker date="1561056849883" expanded="true" signature="226:542" ph="{...}" />
-            <marker date="1561056849883" expanded="true" signature="611:941" ph="{...}" />
-            <marker date="1561056849883" expanded="true" signature="1022:1355" ph="{...}" />
-            <marker date="1561056849883" expanded="true" signature="1419:2122" ph="{...}" />
-            <marker date="1561056849883" expanded="true" signature="2177:2410" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NameSorterUnitTests/ProgramUnitTests.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/NameSorterUnitTests/ProgramUnitTests.cs" />
+    <entry file="file://$PROJECT_DIR$/NameSorter/ArgumentExtractor.cs" />
     <entry file="file://$PROJECT_DIR$/NameSorter/Name.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1264">
-          <caret line="84" column="57" lean-forward="true" selection-start-line="84" selection-start-column="57" selection-end-line="84" selection-end-column="57" />
+        <state relative-caret-position="240">
+          <caret line="112" column="49" lean-forward="true" selection-start-line="112" selection-start-column="49" selection-end-line="112" selection-end-column="49" />
           <folding>
-            <marker date="1561115347748" expanded="false" signature="6:152" ph="..." />
-            <marker date="1561115347748" expanded="true" signature="174:5220" ph="{...}" />
-            <marker date="1561115347748" expanded="true" signature="181:257" ph="/* Class used to represent a name in the NameSorter program. ... */" />
-            <marker date="1561115347748" expanded="true" signature="279:5218" ph="{...}" />
-            <marker date="1561115347748" expanded="true" signature="359:561" ph="/* Constructor that takes a raw name string and construct the name using this, this also take in an parameter for ... */" />
-            <marker date="1561115347748" expanded="true" signature="622:787" ph="{...}" />
-            <marker date="1561115347748" expanded="true" signature="842:900" ph="{...}" />
-            <marker date="1561115347748" expanded="true" signature="961:1047" ph="{...}" />
-            <marker date="1561115347748" expanded="true" signature="1130:1770" ph="{...}" />
-            <marker date="1561115347748" expanded="true" signature="1168:1760" ph="{...}" />
-            <marker date="1561115347748" expanded="true" signature="1839:2802" ph="{...}" />
-            <marker date="1561115347748" expanded="true" signature="2060:2619" ph="{...}" />
-            <marker date="1561115347748" expanded="true" signature="2406:2584" ph="{...}" />
-            <marker date="1561115347748" expanded="true" signature="2673:2748" ph="{...}" />
-            <marker date="1561115347748" expanded="true" signature="2869:3438" ph="{...}" />
-            <marker date="1561115347748" expanded="true" signature="3257:3336" ph="{...}" />
-            <marker date="1561115347748" expanded="true" signature="3507:4063" ph="{...}" />
-            <marker date="1561115347748" expanded="true" signature="3861:3961" ph="{...}" />
-            <marker date="1561115347748" expanded="true" signature="4135:4685" ph="{...}" />
-            <marker date="1561115347748" expanded="true" signature="4483:4583" ph="{...}" />
-            <marker date="1561115347748" expanded="true" signature="4726:4985" ph="{...}" />
-            <marker date="1561115347748" expanded="true" signature="5028:5212" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NameSorter/ArgumentExtractor.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NameSorter/NameSorter.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-157">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <marker date="1561123725920" expanded="false" signature="6:96" ph="..." />
-            <marker date="1561123725920" expanded="true" signature="118:2963" ph="{...}" />
-            <marker date="1561123725920" expanded="true" signature="148:2961" ph="{...}" />
-            <marker date="1561123725920" expanded="true" signature="250:310" ph="{...}" />
-            <marker date="1561123725920" expanded="true" signature="328:482" ph="/* This function takes the inputted filepath and extracts the names from this file returning it as a Name object ... */" />
-            <marker date="1561123725920" expanded="true" signature="555:1280" ph="{...}" />
-            <marker date="1561123725920" expanded="true" signature="581:1087" ph="{...}" />
-            <marker date="1561123725920" expanded="true" signature="854:1002" ph="{...}" />
-            <marker date="1561123725920" expanded="true" signature="1131:1270" ph="{...}" />
-            <marker date="1561123725920" expanded="true" signature="1290:1443" ph="/* This function is used to output the sorted names to the command line and also a text file in the current ... */" />
-            <marker date="1561123725920" expanded="true" signature="1515:2272" ph="{...}" />
-            <marker date="1561123725920" expanded="true" signature="1869:2192" ph="{...}" />
-            <marker date="1561123725920" expanded="true" signature="2003:2137" ph="{...}" />
-            <marker date="1561123725920" expanded="true" signature="2282:2486" ph="/* This method is used to sort a list of names contained in a .txt file. It takes a file path and the format that ... */" />
-            <marker date="1561123725920" expanded="true" signature="2562:2955" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NameSorter/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="93" column="116" selection-start-line="93" selection-start-column="116" selection-end-line="93" selection-end-column="116" />
-          <folding>
-            <marker date="1561124472030" expanded="true" signature="6:95" ph="..." />
-            <marker date="1561124472030" expanded="true" signature="117:3474" ph="{...}" />
-            <marker date="1561124472030" expanded="true" signature="124:416" ph="/* Enum used to represent possible formats for the input name string, example is given as string with the names ... */" />
-            <marker date="1561124472030" expanded="true" signature="444:513" ph="{...}" />
-            <marker date="1561124472030" expanded="true" signature="536:3472" ph="{...}" />
-            <marker date="1561124472030" expanded="true" signature="698:911" ph="/* Function for extracting the arguments from the args input in the main function, it takes the input string ... */" />
-            <marker date="1561124472030" expanded="true" signature="966:2214" ph="{...}" />
-            <marker date="1561124472030" expanded="true" signature="1140:2204" ph="{...}" />
-            <marker date="1561124472030" expanded="true" signature="1197:1870" ph="{...}" />
-            <marker date="1561124472030" expanded="true" signature="1263:1852" ph="{...}" />
-            <marker date="1561124472030" expanded="true" signature="1891:2190" ph="{...}" />
-            <marker date="1561124472030" expanded="true" signature="1951:2056" ph="{...}" />
-            <marker date="1561124472030" expanded="true" signature="2081:2172" ph="{...}" />
-            <marker date="1561124472030" expanded="true" signature="2224:2301" ph="/* Function for converting string into a format enum. ... */" />
-            <marker date="1561124472030" expanded="true" signature="2373:2826" ph="{...}" />
-            <marker date="1561124472030" expanded="true" signature="2513:2785" ph="{...}" />
-            <marker date="1561124472030" expanded="true" signature="2867:3466" ph="{...}" />
-            <marker date="1561124472030" expanded="true" signature="2970:3321" ph="{...}" />
-            <marker date="1561124472030" expanded="true" signature="3069:3307" ph="{...}" />
-            <marker date="1561124472030" expanded="true" signature="3361:3456" ph="{...}" />
+            <marker date="1561134252006" expanded="false" signature="6:152" ph="..." />
+            <marker date="1561134252006" expanded="true" signature="174:4570" ph="{...}" />
+            <marker date="1561134252006" expanded="true" signature="181:257" ph="/* Class used to represent a name in the NameSorter program. ... */" />
+            <marker date="1561134252006" expanded="true" signature="279:4568" ph="{...}" />
+            <marker date="1561134252006" expanded="true" signature="359:561" ph="/* Constructor that takes a raw name string and construct the name using this, this also take in an parameter for ... */" />
+            <marker date="1561134252006" expanded="true" signature="622:787" ph="{...}" />
+            <marker date="1561134252006" expanded="true" signature="797:983" ph="/* Simple constructor that takes in the values for both forenames and surnames directly instead of having to ... */" />
+            <marker date="1561134252006" expanded="true" signature="1037:1095" ph="{...}" />
+            <marker date="1561134252006" expanded="true" signature="1156:1242" ph="{...}" />
+            <marker date="1561134252006" expanded="true" signature="1325:2130" ph="{...}" />
+            <marker date="1561134252006" expanded="true" signature="1510:2120" ph="{...}" />
+            <marker date="1561134252006" expanded="true" signature="2140:2305" ph="/* This function is used to remove any empty fields from the name component string array so that the name is ... */" />
+            <marker date="1561134252006" expanded="true" signature="2373:2661" ph="{...}" />
+            <marker date="1561134252006" expanded="true" signature="2735:3108" ph="{...}" />
+            <marker date="1561134252006" expanded="true" signature="2928:3006" ph="{...}" />
+            <marker date="1561134252006" expanded="true" signature="3184:3602" ph="{...}" />
+            <marker date="1561134252006" expanded="true" signature="3401:3500" ph="{...}" />
+            <marker date="1561134252006" expanded="true" signature="3681:4093" ph="{...}" />
+            <marker date="1561134252006" expanded="true" signature="3892:3991" ph="{...}" />
+            <marker date="1561134252006" expanded="true" signature="4134:4393" ph="{...}" />
+            <marker date="1561134252006" expanded="true" signature="4436:4562" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -568,12 +470,82 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="357">
-            <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <first_editor relative-caret-position="848">
+            <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NameSorterUnitTests/NameUnitTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+          <folding>
+            <marker date="1561125289133" expanded="false" signature="6:89" ph="..." />
+            <marker date="1561125289133" expanded="true" signature="120:2436" ph="{...}" />
+            <marker date="1561125289133" expanded="true" signature="153:2434" ph="{...}" />
+            <marker date="1561125289133" expanded="true" signature="226:542" ph="{...}" />
+            <marker date="1561125289133" expanded="true" signature="611:941" ph="{...}" />
+            <marker date="1561125289133" expanded="true" signature="1022:1355" ph="{...}" />
+            <marker date="1561125289133" expanded="true" signature="1419:2140" ph="{...}" />
+            <marker date="1561125289133" expanded="true" signature="2195:2428" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NameSorter/NameSorter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+          <folding>
+            <marker date="1561125835503" expanded="false" signature="6:96" ph="..." />
+            <marker date="1561125835503" expanded="true" signature="118:2972" ph="{...}" />
+            <marker date="1561125835503" expanded="true" signature="148:2970" ph="{...}" />
+            <marker date="1561125835503" expanded="true" signature="259:319" ph="{...}" />
+            <marker date="1561125835503" expanded="true" signature="337:491" ph="/* This function takes the inputted filepath and extracts the names from this file returning it as a Name object ... */" />
+            <marker date="1561125835503" expanded="true" signature="564:1289" ph="{...}" />
+            <marker date="1561125835503" expanded="true" signature="590:1096" ph="{...}" />
+            <marker date="1561125835503" expanded="true" signature="863:1011" ph="{...}" />
+            <marker date="1561125835503" expanded="true" signature="1140:1279" ph="{...}" />
+            <marker date="1561125835503" expanded="true" signature="1299:1452" ph="/* This function is used to output the sorted names to the command line and also a text file in the current ... */" />
+            <marker date="1561125835503" expanded="true" signature="1524:2281" ph="{...}" />
+            <marker date="1561125835503" expanded="true" signature="1878:2201" ph="{...}" />
+            <marker date="1561125835503" expanded="true" signature="2012:2146" ph="{...}" />
+            <marker date="1561125835503" expanded="true" signature="2291:2495" ph="/* This method is used to sort a list of names contained in a .txt file. It takes a file path and the format that ... */" />
+            <marker date="1561125835503" expanded="true" signature="2571:2964" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NameSorter/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="83" column="39" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="39" />
+          <folding>
+            <marker date="1561125710443" expanded="true" signature="6:95" ph="..." />
+            <marker date="1561125710443" expanded="true" signature="117:3470" ph="{...}" />
+            <marker date="1561125710443" expanded="true" signature="124:416" ph="/* Enum used to represent possible formats for the input name string, example is given as string with the names ... */" />
+            <marker date="1561125710443" expanded="true" signature="444:513" ph="{...}" />
+            <marker date="1561125710443" expanded="true" signature="532:3468" ph="{...}" />
+            <marker date="1561125710443" expanded="true" signature="694:907" ph="/* Function for extracting the arguments from the args input in the main function, it takes the input string ... */" />
+            <marker date="1561125710443" expanded="true" signature="962:2210" ph="{...}" />
+            <marker date="1561125710443" expanded="true" signature="1136:2200" ph="{...}" />
+            <marker date="1561125710443" expanded="true" signature="1193:1866" ph="{...}" />
+            <marker date="1561125710443" expanded="true" signature="1259:1848" ph="{...}" />
+            <marker date="1561125710443" expanded="true" signature="1887:2186" ph="{...}" />
+            <marker date="1561125710443" expanded="true" signature="1947:2052" ph="{...}" />
+            <marker date="1561125710443" expanded="true" signature="2077:2168" ph="{...}" />
+            <marker date="1561125710443" expanded="true" signature="2220:2297" ph="/* Function for converting string into a format enum. ... */" />
+            <marker date="1561125710443" expanded="true" signature="2369:2822" ph="{...}" />
+            <marker date="1561125710443" expanded="true" signature="2509:2781" ph="{...}" />
+            <marker date="1561125710443" expanded="true" signature="2863:3462" ph="{...}" />
+            <marker date="1561125710443" expanded="true" signature="2966:3317" ph="{...}" />
+            <marker date="1561125710443" expanded="true" signature="3065:3303" ph="{...}" />
+            <marker date="1561125710443" expanded="true" signature="3357:3452" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

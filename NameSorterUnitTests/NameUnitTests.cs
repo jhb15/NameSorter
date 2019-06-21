@@ -47,14 +47,13 @@ namespace NameSorterUnitTests
             var name2 = new Name("Alfred James", "Britton");
             var name3 = new Name("Alice Laura", "Britton");
             var name4 = new Name("James Henry", "Britton");
-
-            var equalName4 = name4;
+            var name5 = new Name("James Henry", "Britton");
 
             Assert.True(name1.CompareTo(name2) < 0);
             Assert.True(name2.CompareTo(name3) < 0);
             Assert.True(name3.CompareTo(name4) < 0);
             
-            Assert.True(name4.CompareTo(equalName4) == 0);
+            Assert.True(name4.CompareTo(name5) == 0);
             
             Assert.True(name4.CompareTo(name3) > 0);
             Assert.True(name3.CompareTo(name2) > 0);

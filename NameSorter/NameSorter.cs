@@ -8,7 +8,7 @@ namespace NameSorter
 {
     public class NameSorter
     {
-        private IFileWrapper _fileWrapper;
+        private readonly IFileWrapper _fileWrapper;
 
         public NameSorter(IFileWrapper fileWrapper)
         {
