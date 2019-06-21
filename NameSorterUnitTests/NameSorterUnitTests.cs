@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 using Moq;
@@ -30,21 +31,32 @@ namespace NameSorterUnitTests
             "Dsurname Bmiddle Dfirst",
             "Bsurname Bmiddle Bfirst  ",
             "Asurname Amiddle Afirst"};
-        
 
-        readonly string[] _outputFile = {"Afirst Amiddle Asurname",
+
+        private readonly string[] _outputFileAsc = 
+        {
+            "Afirst Amiddle Asurname",
             "Bfirst Bmiddle Bsurname",
             "Cfirst Cmiddle Csurname",
             "Dfirst Bmiddle Dsurname",
-            "Dfirst Zmiddle Dsurname"};
-        
-        [Fact]
-        public void TestSort_InOrderNames()
+            "Dfirst Zmiddle Dsurname"
+        };
+
+        private readonly string[] _outputFileDec =
+        {
+            "Dfirst Zmiddle Dsurname",
+            "Dfirst Bmiddle Dsurname",
+            "Cfirst Cmiddle Csurname",
+            "Bfirst Bmiddle Bsurname",
+            "Afirst Amiddle Asurname"
+        };
+
+        private void TestSort(bool order, NameFormats format, string[] input, string[] output)
         {
             string testOutPath = "sorted" + TestFilePath;
             
             Mock<IFileWrapper> mockFileWrapper = new Mock<IFileWrapper>();
-            mockFileWrapper.Setup<string[]>(m => m.ReadAllLines(It.Is<string>(s=> String.Compare(s, TestFilePath, StringComparison.Ordinal) == 0))).Returns(_inputFileInOrder);
+            mockFileWrapper.Setup<string[]>(m => m.ReadAllLines(It.Is<string>(s=> String.Compare(s, TestFilePath, StringComparison.Ordinal) == 0))).Returns(input);
             Mock<StreamWriter> streamWriter = new Mock<StreamWriter>(testOutPath);
             mockFileWrapper.Setup<StreamWriter>(m =>
                     m.GetStreamWriter(It.Is<string>(s =>
@@ -52,56 +64,48 @@ namespace NameSorterUnitTests
                 .Returns(streamWriter.Object);
             
             global::NameSorter.NameSorter nameSorter = new global::NameSorter.NameSorter(mockFileWrapper.Object);
-            nameSorter.Sort(TestFilePath, NameFormats.InOrder);
+            nameSorter.Sort(TestFilePath, format, order);
 
-            foreach (var line in _outputFile)
+            foreach (var line in output)
             {
                 streamWriter.Verify(a => a.WriteLine(line), Times.Exactly(1));
             }
         }
-        
-        [Fact]
-        public void TestSort_SurnameFirstNames()
-        {
-            string testOutPath = "sorted" + TestFilePath;
-            
-            Mock<IFileWrapper> mockFileWrapper = new Mock<IFileWrapper>();
-            mockFileWrapper.Setup<string[]>(m => m.ReadAllLines(It.Is<string>(s=> String.Compare(s, TestFilePath, StringComparison.Ordinal) == 0))).Returns(_inputFileSurnameFirst);
-            Mock<StreamWriter> streamWriter = new Mock<StreamWriter>(testOutPath);
-            mockFileWrapper.Setup<StreamWriter>(m =>
-                    m.GetStreamWriter(It.Is<string>(s =>
-                        string.Compare(s, testOutPath, StringComparison.Ordinal) == 0)))
-                .Returns(streamWriter.Object);
-            
-            global::NameSorter.NameSorter nameSorter = new global::NameSorter.NameSorter(mockFileWrapper.Object);
-            nameSorter.Sort(TestFilePath, NameFormats.SurnameFirst);
 
-            foreach (var line in _outputFile)
-            {
-                streamWriter.Verify(a => a.WriteLine(line), Times.Exactly(1));
-            }
+        [Fact]
+        public void TestSort_InOrderNames_Asc()
+        {
+            TestSort(true, NameFormats.InOrder, _inputFileInOrder, _outputFileAsc);
         }
         
         [Fact]
-        public void TestSort_BackwardsNames()
+        public void TestSort_SurnameFirstNames_Asc()
         {
-            string testOutPath = "sorted" + TestFilePath;
-            
-            Mock<IFileWrapper> mockFileWrapper = new Mock<IFileWrapper>();
-            mockFileWrapper.Setup<string[]>(m => m.ReadAllLines(It.Is<string>(s=> String.Compare(s, TestFilePath, StringComparison.Ordinal) == 0))).Returns(_inputFileBackwards);
-            Mock<StreamWriter> streamWriter = new Mock<StreamWriter>(testOutPath);
-            mockFileWrapper.Setup<StreamWriter>(m =>
-                    m.GetStreamWriter(It.Is<string>(s =>
-                        string.Compare(s, testOutPath, StringComparison.Ordinal) == 0)))
-                .Returns(streamWriter.Object);
-            
-            global::NameSorter.NameSorter nameSorter = new global::NameSorter.NameSorter(mockFileWrapper.Object);
-            nameSorter.Sort(TestFilePath, NameFormats.Backwards);
-
-            foreach (var line in _outputFile)
-            {
-                streamWriter.Verify(a => a.WriteLine(line), Times.Exactly(1));
-            }
+            TestSort(true, NameFormats.SurnameFirst, _inputFileSurnameFirst, _outputFileAsc);
+        }
+        
+        [Fact]
+        public void TestSort_BackwardsNames_Asc()
+        {
+            TestSort(true, NameFormats.Backwards, _inputFileBackwards, _outputFileAsc);
+        }
+        
+        [Fact]
+        public void TestSort_InOrderNames_Dec()
+        {
+            TestSort(false, NameFormats.InOrder, _inputFileInOrder, _outputFileDec);
+        }
+        
+        [Fact]
+        public void TestSort_SurnameFirstNames_Dec()
+        {
+            TestSort(false, NameFormats.SurnameFirst, _inputFileSurnameFirst, _outputFileDec);
+        }
+        
+        [Fact]
+        public void TestSort_BackwardsNames_Dec()
+        {
+            TestSort(false, NameFormats.Backwards, _inputFileBackwards, _outputFileDec);
         }
     }
 }
