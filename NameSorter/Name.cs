@@ -16,8 +16,8 @@ namespace NameSorter
         public string Surname;
 
         /**
-         * Constructor that takes a raw name string and construct the name using this, this also take in an parameter for
-         * Name Format, if this is null it defaults to in order.
+         * Constructor that takes a raw name string and constructs a name object using this, this also takes in an
+         * parameter for Name Format, if this is null it defaults to in order.
          */
         public Name(string rawNameText, NameFormats? format)
         {

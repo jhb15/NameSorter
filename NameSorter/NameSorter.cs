@@ -10,6 +10,10 @@ namespace NameSorter
     {
         private readonly IFileWrapper _fileWrapper;
 
+        /**
+         * Constructs a name sorter object and also tales in a file wrapper object, this is to make the class unit
+         * testable.
+         */
         public NameSorter(IFileWrapper fileWrapper)
         {
             _fileWrapper = fileWrapper;
